@@ -41,7 +41,9 @@ NOTE :pencil2: : There is no relation between the 1's placement and start. For u
 At 1st iteration what I need is 1, 2nd is 2, and 3rd is 3 right!. So, I just marked how many ones I need at each iteration. Please consider index of the sheet as iteration. <br/>
 After marking, how many ones I need at each iteration from 'n' ones. Look at the latest sheet, and if we sum all the marked ones (1's), we'll get the desired output.<br/>
 NOTE :pencil2: : Just count number of ones (1's). You'll get N ** 2 value which is 25 (5 ** 2). <br/>
-No change, we're marking diagonal 1's in different color and we'll see it....
+No change, we're just marking diagonal 1's in different color and we'll see it....
+
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/ca62e0b5-ea4e-42ce-b9bf-7475d1d63f4b)
 
 
 
