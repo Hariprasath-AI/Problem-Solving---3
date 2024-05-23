@@ -28,7 +28,7 @@ print(count) <br/>
 # My Approach (Logical Thinking by incorporating Mathematical Knowledge):
 
 For Instance, taking Example 1. Initially 1 is there, next I've to add 2 with existing 1. Then 3 with existing sum (1 + 2 = 3). And goes on... And finally, we got 15 (1 + 2 + 3 + 4 + 5). 
-How should I produce mathematicaaly proven formula for this problem. My ultimate target is to run the code in milliseconds or less than that. 
+How should I produce mathematicaaly proven formula for this problem. My ultimate target is to get the output/result in milliseconds or less than that. 
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/eeaf48bc-fa51-4825-881d-bbbc4fc7c0e1)
 
 
