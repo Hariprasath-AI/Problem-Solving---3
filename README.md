@@ -53,7 +53,7 @@ We know that there will be diagonal for all 'n' values(stop).
 So, just seperate the upper and lower part of the diagonal in the above sheet. <br/>
 NOTE :pencil2: : The 'white' colored 1's belongs to the upper part and 'green' colored 1's belongs to the lower part. <br/>
 After seperation, just look at the sheet what values we want. Simple, we need diagonal part and lower part. Am I right!!! <br/>
-NOTE :pencil2: : The sum of upper 1's and lower 1's will always same. <br/>
+NOTE :pencil2: : The sum of upper 1's and lower 1's will always same. Don't ask me why?.. That's math :laughing: <br/>
 
 
 
