@@ -55,6 +55,7 @@ NOTE :pencil2: : The 'white' colored 1's belongs to the upper part and 'green' c
 After seperation, just look at the sheet what values we want. Simple, we need diagonal part and lower part. Am I right!!! <br/>
 NOTE :pencil2: : The sum of upper 1's and lower 1's will always same. Don't ask me why?.. That's math :laughing: <br/>
 We need diagonal and lower part right!!! What actually diagonal mean....
+NOTE :pencil2: : Considered, start and stop value from example 1. 
 1) Sum of diagonal is nothing but the stop or 'n'.
 2) To get lower part and upper part, we've to reduce stop value from total 1's which is the square of stop. ((stop ** 2) - stop ---> ((5 ** 2) - 5) ---> (25 - 5) ---> 20).
 3) 20 is the total 1's excluding diagonal. To get lower part, just simply divide it by 2. you'll get sum of lower part 1's (20/2 = 10).
