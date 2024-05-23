@@ -31,10 +31,14 @@ For Instance, taking Example 1. Initially 1 is there, next I've to add 2 with ex
 How should I produce mathematicaaly proven formula for this problem. My ultimate target is to get the output/result in milliseconds or less than that for any input (start and stop).
 
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/eeaf48bc-fa51-4825-881d-bbbc4fc7c0e1)
-
 The above sheet shows how the traditional approach will return the result after each iteration.
 
-First, I'm writing this in paper. 
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/f03e89df-cf57-4c9c-bddd-76b46315208b)
+In the above sheet I just places 1's in every cell with 'n' columns and 'n' rows. Wnhereas, 'n' is the stop and start as 1. 
+NOTE : There is no relation between the 1's placement and start. For understanding purpose I put 1's in each each. So, don't confuse. 
+At 1st iteration what I need is 1, 2nd is 2, and 3rd is 3 right!. So, I just marked how many ones I need at each iteration. Please consider index of the sheet as iteration.
+After marking how many ones I need at each iteration from 'n' ones. Look at latest sheet, and if we sum all marked ones (1's), we'll get the desired output.
+Just count number of ones (1's). You'll get N ** 2 value which is 25 (5 ** 2).
 
 
 
