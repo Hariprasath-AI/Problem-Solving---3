@@ -44,6 +44,8 @@ NOTE :pencil2: : Just count number of ones (1's). You'll get N ** 2 value which 
 No change, we're just marking diagonal 1's in different color and we'll see it....
 
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/ca62e0b5-ea4e-42ce-b9bf-7475d1d63f4b)
+NOTE :pencil2: : There will be a diagonal for all values. Let's check with even stop as 4 and with same start of 1.
+
 
 
 
