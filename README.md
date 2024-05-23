@@ -34,6 +34,8 @@ How should I produce mathematicaaly proven formula for this problem. My ultimate
 
 The above sheet shows how the traditional approach will return the result after each iteration.
 
+First, I'm writing this in paper. 
+
 
 
 
