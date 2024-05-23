@@ -21,6 +21,6 @@ print(count) <br/>
 ## TRADITIONAL PROGRAMMER :loudspeaker: : <h3> Hey Mr..., that's it.... take it... :smirk: </h3>
 ## SOMEONE :loudspeaker: : <h3>Okay, fine :smiley:. What you will do if I need to sum the series with distance:grey_question::exclamation: <br/>For example, distance = 2 (1 + 3 + 5 = 9). </h3>
 ## TRADITIONAL PROGRAMMER :loudspeaker: : <h3> Hey,  just change the step value from 1 to 2 in the 'range' function of the 'for' loop. </h3>
-## SOMEONE :loudspeaker: : <h3> Okay, that's fine. If my start and stop value are too low, <br/> your running time of code will not be noticeable which<br/> means that we can't observe the time difference in seconds. <br/> Our modern day CPU's will handle easily. What you will do if I gave 1 as start and <br/> 1 lakh million as stop or 1000 lakh million as stop value. <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For 1 lakh million, my PC will take around 160 hours to compute. <br/> This is not a small amount of time. So, how you will approach :grey_question: </h3>
+## SOMEONE :loudspeaker: : <h3> Okay, that's fine. If my start and stop value are too low, your running time of code will not be noticeable which means that we can't observe the time difference in seconds. Our modern day CPU's will handle easily. What you will do if I gave 1 as start and 1 lakh million as stop or 1000 lakh million as stop value. For 1 lakh million, my PC will take around 160 hours to compute. <br/> This is not a small amount of time. So, how you will approach :grey_question: </h3>
 
 
