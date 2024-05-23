@@ -18,7 +18,7 @@ count = 0 <br/>
 for i in range(start_input, stop_input + 1): <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;count += i <br/>
 print(count) <br/>
-## <u>TRADITIONAL PROGRAMMER :</u> <h4> Hey Mr., that's it.... take it... </h4>
+## TRADITIONAL PROGRAMMER : <h3> Hey Mr., that's it.... take it... </h3>
 ## <u>SOMEONE :</u> Okay, Fine. what you will do if I need to sum of series with distance. <br/>For example, distance = 2 (1 + 3 + 5 = 9).  
 ## <u>TRADITIONAL PROGRAMMER :</u> Hey,  just change the step value from 1 to 2 in the 'range' function of the 'for' loop.
 ## <u>SOMEONE :</u> Okay, that's fine. If my start and stop value are too low, <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; your running time of code will not be noticeable which<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; means that we can't observe the time difference in seconds. <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our modern day CPU's will handle easily. What you will do if I gave 1 as start and <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 lakh million as stop or 1000 lakh million as stop value. <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For 1 lakh million, my PC will take around 160 hours to compute. <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is not a small amount of time. So, how you will approach???????
