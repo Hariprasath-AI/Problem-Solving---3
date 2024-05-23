@@ -34,7 +34,7 @@ How should I produce mathematicaaly proven formula for this problem. My ultimate
 The above sheet shows how the traditional approach will return the result after each iteration.
 
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/f03e89df-cf57-4c9c-bddd-76b46315208b)
-In the above sheet I just placed 1's in every cell with 'n' columns and 'n' rows. Wnhereas, 'n' is the stop and start as 1. 
+In the above sheet I just placed 1's in every cell with 'n' columns and 'n' rows. Whereas, 'n' is the stop and start as 1. 
 NOTE : There is no relation between the 1's placement and start. For understanding purpose I put 1's in each each. So, don't confuse. 
 At 1st iteration what I need is 1, 2nd is 2, and 3rd is 3 right!. So, I just marked how many ones I need at each iteration. Please consider index of the sheet as iteration.
 After marking how many ones I need at each iteration from 'n' ones. Look at latest sheet, and if we sum all marked ones (1's), we'll get the desired output.
