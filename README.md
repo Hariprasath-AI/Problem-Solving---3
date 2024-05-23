@@ -25,5 +25,10 @@ print(count) <br/>
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/9844b3ac-06b2-4720-8979-db7fd590206a)
 ## TRADITIONAL PROGRAMMER :loudspeaker: : <h3>what :grey_question::exclamation::disappointed:</h3>
 
+# My Approach (Logical Thinking by incorporating Mathematical Knowledge):
+
+
+
+
 
 
