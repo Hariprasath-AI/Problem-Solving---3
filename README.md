@@ -13,9 +13,9 @@ start = 1, stop = 5 <br/>
 1 +..+..+ 5 -> 1 + 2 + 3 + 4 + 5 = 15 <br/>
 This is what we need.. <br/>
 # Traditional Programmer's Approach (Python Code) : 
-N = int(input()) <br/>
+start_input, stop_input = int(input()), int(input()) <br/>
 count = 0
-for i in range(start, stop + 1): <br/>
+for i in range(start_input, stop_input + 1): <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;count += i <br/>
 print(count) <br/>
 ## <u>TRADITIONAL PROGRAMMER :</u> Hey Mr., that's it.... take it...
