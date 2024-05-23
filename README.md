@@ -14,7 +14,7 @@ start = 1, stop = 5 <br/>
 This is what we need.. <br/>
 # Traditional Programmer's Approach (Python Code) : 
 start_input, stop_input = int(input()), int(input()) <br/>
-count = 0
+count = 0 <br/>
 for i in range(start_input, stop_input + 1): <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;count += i <br/>
 print(count) <br/>
