@@ -47,7 +47,8 @@ No change, we're just marking diagonal 1's in different color and we'll see it..
 NOTE :pencil2: : There will be a diagonal for all values. Let's check with even stop as 4 and with same start of 1.
 
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/b09021b7-7ee3-4afa-8fab-b247956feb00)
-This is how it will look of stop 4 and start 1. Now we can write the formula to find the sum of series.
+This is how it will look for stop value of 4 and start of 1. Now we can write the formula to find the sum of series.
+
 We know that there will be diagonal for all 'n' values(stop). 
 So, just seperate the upper and lower part of diagonal in the above sheet.
 NOTE :pencil2: : The 'white' colored 1's are the upper part and 'green' colored 1's belongs to lower part.
