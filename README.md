@@ -123,7 +123,7 @@ First, we will check this input with traditional approach.....
 Around 7000 hours in the traditional approach. How it will be in mathematical approach? Let's check it...
 
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/1fa32a24-0394-442e-8241-8d24dde273e3)
-Uffff..... Again 0 microsecond which means less than a microsecond. The difference is very huge, from 7000 hours to less than 0 microsecond(may be few nanoseconds) which is insane.
+Uffff..... Again 0 microsecond which means less than a microsecond. The difference is very huge, from 7000 hours to less than a microsecond(may be few nanoseconds) which is insane.
 
 
 
