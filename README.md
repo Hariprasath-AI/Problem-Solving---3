@@ -64,8 +64,8 @@ NOTE :pencil2: : Considered, start and stop value from example 1.
 
 We've to prove with time consumption. So, look at the upcoming image...
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/f7e0e954-2d5f-4e62-81b0-41251ac71e2a)
-NOTE :pencil2: : datetime module is used to compute the running time. Here, the format is Hour:Minute:Second.Microsecond
-0 difference is time in microsecond which is lesser than millisecond (1 second = 1000 millisecond, 1 millisecond = 1000 microsecond, 1 microsecond = 1000 nanosecond).
+NOTE :pencil2: : datetime module is used to compute the running time. Here, the format is Hour:Minute:Second.Microsecond. <br/>
+0 difference is time in microsecond which is lesser than millisecond (1 second = 1000 millisecond, 1 millisecond = 1000 microsecond, 1 microsecond = 1000 nanosecond). <br/>
 Not even 1 microsecond. Just think about the time taken in traditional approach which is around 70 hours. 
 
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/1f8ec94b-8fff-4eba-bc4d-78fa851a8ce0)
