@@ -49,7 +49,7 @@ NOTE :pencil2: : There will be a diagonal for all values. Let's check with even 
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/b09021b7-7ee3-4afa-8fab-b247956feb00)
 This is how it will look for stop value of 4 and start of 1. 
 
-We know that there will be diagonal for all 'n' values(stop). 
+We know that, there will be diagonal for all 'n' values(stop). 
 So, just seperate the upper and lower part of the diagonal in the above sheet. <br/>
 NOTE :pencil2: : The 'white' colored 1's belongs to the upper part and 'green' colored 1's belongs to the lower part. <br/>
 After seperation, just look at the sheet what values we want. Simple, we need diagonal part and lower part. Am I right!!! <br/>
