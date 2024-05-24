@@ -125,5 +125,9 @@ Around 7000 hours in the traditional approach. How it will be in mathematical ap
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/1fa32a24-0394-442e-8241-8d24dde273e3)
 Uffff..... Again 0 microsecond which means less than a microsecond. The difference is very huge, from 7000 hours to less than a microsecond(may be few nanoseconds) which is insane.
 
+## 3) Moving to the next phase of the approach (Dynamic start, dynamic stop and dynamic step):
 
-
+What we do if I need sum of series with desired interval.
+For example, min = 3, max = 7 and interval = 2 ---->  3 + 5 + 7 = 15
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/0619b730-4c42-4af6-83db-be305d50ea11)
+The sum that we wan is shaded in green color in the above sheet.
