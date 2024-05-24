@@ -65,6 +65,9 @@ NOTE :pencil2: : Start and stop value considered from example 1.
 5) Finally, add it with stop (n). 10(lower part) + 5(stop) = 15.
 6) Hurray, we got it... :sparkles: :star:
 
+## Discovered Formula : ((((max ** 2) - max) / 2) + max)
+NOTE :pencil2: : max is nothing but the stop value
+
 We've to prove with time consumption. So, look at the upcoming image...
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/f7e0e954-2d5f-4e62-81b0-41251ac71e2a)
 NOTE :pencil2: : datetime module is used to compute the running time. Here, the format is Hour:Minute:Second.Microsecond. <br/>
@@ -94,8 +97,24 @@ I just marked the desired sum that we want in red colored grid lines. Now you'll
 Then we can mark the sum that we don't want also right!!!! which is the 1's of rest of the red grid lines. ok, I'll mark it in blue line. Look at the below image.
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/2f879831-94e7-4a86-8032-76e12d70c05a)
 
+Now, we observed that the desired sum of series(dynamic start/stop) is within the static start & dynamic stop, right! 
+ok, what will the output for start = 1 and stop = 7. It will be the sum of 1's present in the red and blue grid lines. 
+And we know that the formula for static start(1st approach). We just want to exclude the rest 1's. 
+So, we need to modify the formula of 1st approach to get formula for this approach.
 
+NOTE :pencil2: : max is nothing but the stop value and min is the start value.
 
+###RULE :
+1) First, we need to sum the series from static 1 to dynamic stop value.
+2) After that we need calculate the sum of 1's that we want to exclude.
+3) If we reduce the sum value of '2)' from '1)', we'll get desired output.
+
+###The formula for above rule:
+1) ((((max ** 2) - max) / 2) + max), same formula that we discovered from 1st approach.
+2) Here, we need to replace 'max' with (min - 1) ---> (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))
+3) Just reducing 2) from 1) ---> ((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))
+
+## Discovered Formula : ((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))
 
 
 
