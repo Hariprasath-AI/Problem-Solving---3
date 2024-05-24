@@ -137,4 +137,5 @@ We're going to remove rest of the rows which unshaded and looking at the sheet.
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/85687206-1281-4f7a-8bb0-98616df7239b)
 
 ### NOTE :pencil2: : The number of rows and columns will be different for interval > 1 for 1's placement table. Here the interval is 2. 
-### Simply we can't reduce the unshaded part from total sum(min = 1, max = 7). Because, the shaded one is followed by unshaded with particular frequency.
+Simply we can't reduce the unshaded part from total sum(min = 1, max = 7). Because, the shaded one is followed by unshaded with particular frequency.
+So, we need look at the 1's placement table closely after removing unshaded rows. The table is given below...
