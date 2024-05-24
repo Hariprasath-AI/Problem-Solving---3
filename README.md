@@ -80,6 +80,21 @@ Here, the mathematical approach is insane. :sunglasses:
 
 The approach above is for static start and dynamic stop value. Just think about it, what we have to do in the case of dynamic start and dynamic stop. 
 The constraint are same the start and stop should be greater than zero and stop should be greater than start value.
+For instance (example 1), start = 3 and stop = 7. I need sum of series/sequence which is 3 + 4 + 5 + 6 + 7 = 25. 
+
+We're not going to think too much. Just considering 1 as temporary start which is nothing but the minimum possible start according to constraint. Just look at the below image.
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/a9281c13-c661-4652-868d-87b634ec62c6)
+
+The sheet show what we want to consider to get the desired sum of series. 
+NOTE :pencil2: : 1 is the temporary start.
+We know that start is 3, we have to consider from the index 3 of the above mentioned sheet to get desired output, right!!!. Ok, check the below image.
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/52f26e27-403e-4f03-9ad6-40eff04bb4fd)
+
+I just marked the desired sum that we want in red colored grid lines. Now you'll understand what I mean.
+Then we can mark the sum that we don't want also right!!!! which is the 1's of rest of the red grid lines. ok, I'll mark it in blue line. Look at the below image.
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/2f879831-94e7-4a86-8032-76e12d70c05a)
+
+
 
 
 
