@@ -116,8 +116,14 @@ NOTE :pencil2: : max is nothing but the stop value and min is the start value.
 
 ### Discovered Formula : ((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))
 
-Yeah, it's time to find out the time complexity for worst case. Considering min = 100, max = .
+Yeah, it's time to find out the time complexity for worst case. Considering min = 100, max = 100000000000000.
 First, we will check this input with traditional approach.....
+
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/08ab07de-360d-489c-b7eb-7de745a292a8)
+Around 7000 hours in the traditional approach. How it will be in mathematical approach? Let's check it...
+
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/1fa32a24-0394-442e-8241-8d24dde273e3)
+Uffff..... Again 0 microsecond which means less than microsecond. The difference is very huge, from 7000 hours to less than 0 microsecond(may be few nanoseconds) which is insane.
 
 
 
