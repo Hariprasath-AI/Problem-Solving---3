@@ -29,7 +29,7 @@ print(count) <br/>
 
 # My Approach (Logical Thinking by Incorporating Mathematical Knowledge):
 
-### 1) Statics start and dynamic stop:
+## 1) Static start and dynamic stop:
 
 For Instance, taking Example 1. Initially 1 is there, next I've to add 2 with existing 1. Then 3 with existing sum (1 + 2 = 3). And goes on... And finally, we got 15 (1 + 2 + 3 + 4 + 5). 
 How should I produce mathematicaaly proven formula for this problem. My ultimate target is to get the output/result in milliseconds or less than that for any input (start and stop).
@@ -65,7 +65,7 @@ NOTE :pencil2: : Start and stop value considered from example 1.
 5) Finally, add it with stop (n). 10(lower part) + 5(stop) = 15.
 6) Hurray, we got it... :sparkles: :star:
 
-## Discovered Formula : ((((max ** 2) - max) / 2) + max)
+### Discovered Formula : ((((max ** 2) - max) / 2) + max)
 NOTE :pencil2: : max is nothing but the stop value
 
 We've to prove with time consumption. So, look at the upcoming image...
@@ -79,7 +79,7 @@ Not even 1 microsecond. Just think about the time taken in traditional approach 
 I just pasted the input value of stop 2 times which is ~ square of previous stop value. Just look at the time difference ---> 0 microsecond. May be it took few nanoseconds :laughing:. 
 Here, the mathematical approach is insane. :sunglasses:
 
-### 2) Moving to the next phase of the approach (Dynamic start and dynamic stop):
+## 2) Moving to the next phase of the approach (Dynamic start and dynamic stop):
 
 The approach above is for static start and dynamic stop value. Just think about it, what we have to do in the case of dynamic start and dynamic stop. 
 The constraint are same the start and stop should be greater than zero and stop should be greater than start value.
@@ -114,7 +114,7 @@ NOTE :pencil2: : max is nothing but the stop value and min is the start value.
 2) Here, we need to replace 'max' with (min - 1) ---> (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))
 3) Just reducing 2) from 1) ---> ((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))
 
-## Discovered Formula : ((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))
+### Discovered Formula : ((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))
 
 
 
