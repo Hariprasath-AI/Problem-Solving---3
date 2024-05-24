@@ -116,7 +116,7 @@ NOTE :pencil2: : max is nothing but the stop value and min is the start value.
 
 ### Discovered Formula : ((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))
 
-Yeah, it's time to find out the time complexity for worst case. Considering min = 100000000000, max = 1000000000000000000000000000000000.
+Yeah, it's time to find out the time complexity for worst case. Considering min = 100, max = .
 First, we will check this input with traditional approach.....
 
 
