@@ -130,4 +130,11 @@ Uffff..... Again 0 microsecond which means less than a microsecond. The differen
 What we do if I need sum of series with desired interval.
 For example, min = 3, max = 7 and interval = 2 ---->  3 + 5 + 7 = 15
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/0619b730-4c42-4af6-83db-be305d50ea11)
-The sum that we wan is shaded in green color in the above sheet.
+
+The sum that we want is shaded in green color in the above sheet.
+Here, the approach is slightly different from what we did in the last two approach.
+We're going to remove rest of the rows which unshaded and looking at the sheet.
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/85687206-1281-4f7a-8bb0-98616df7239b)
+
+### NOTE :pencil2: : The number of rows and columns we be different for interval > 1 for 1's placement table. Here the interval is 2. 
+### Simply we can't reduce the unshaded part from total sum(min = 1, max = 7). Because, the shaded one is followed by unshaded with particular frequency.
