@@ -175,13 +175,13 @@ The green shaded value starts at 4 and ends at 6 --> (4,6) ---> 2(2 + 3) --> Int
 ### Total sum excluding diagonal and 1st row (min) = interval * (sum of series)
 
 ## Formula = min + Total sum excluding diagonal and 1st row (min) + (row count - 1)
-:one: min(red shaded part in above image)
-:two: (green shaded part)
+## :one: min(red shaded part in above image)
+## :two: (green shaded part)
 (2nd row shaded count) shade_min = min + interval - 1 <br/>
 (last row shaded count) shade_max = column count - 1 <br/>
 (Start of series after taking out the interval as common value) series_min =  shaded_min // interval <br/>
 (End of series after taking out the interval as common value) series_max = shaded_max // interval <br/>
-series_min and series_max will be passed as min and max in the discovered formula "((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))" and saved in shaded_sum
-:three: 
+series_min and series_max will be passed as min and max in the discovered formula "((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))" and saved in shaded_sum<br/>
+## :three: 
 row count - 1 (oranged shaded part in above image)
 ## Final Formula : :one: + :two: + :three:
