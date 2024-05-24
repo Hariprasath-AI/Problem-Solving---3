@@ -29,7 +29,7 @@ print(count) <br/>
 
 # My Approach (Logical Thinking by Incorporating Mathematical Knowledge):
 
-## 1) Static start and dynamic stop:
+# 1) Static start and dynamic stop:
 
 For Instance, taking Example 1. Initially 1 is there, next I've to add 2 with existing 1. Then 3 with existing sum (1 + 2 = 3). And goes on... And finally, we got 15 (1 + 2 + 3 + 4 + 5). 
 How should I produce mathematicaaly proven formula for this problem. My ultimate target is to get the output/result in milliseconds or less than that for any input (start and stop).
@@ -65,7 +65,7 @@ NOTE :pencil2: : Start and stop value considered from example 1.
 5) Finally, add it with stop (n). 10(lower part) + 5(stop) = 15.
 6) Hurray, we got it... :sparkles: :star:
 
-### Discovered Formula : ((((max ** 2) - max) / 2) + max)
+## Discovered Formula : ((((max ** 2) - max) / 2) + max)
 NOTE :pencil2: : max is nothing but the stop value
 
 We've to prove with time consumption. So, look at the upcoming image...
@@ -79,7 +79,7 @@ Not even 1 microsecond. Just think about the time taken in traditional approach 
 I just pasted the input value of stop 2 times which is ~ square of previous stop value. Just look at the time difference ---> 0 microsecond. May be it took few nanoseconds :laughing:. 
 Here, the mathematical approach is insane. :sunglasses:
 
-## 2) Moving to the next phase of the approach (Dynamic start and dynamic stop):
+# 2) Moving to the next phase of the approach (Dynamic start and dynamic stop):
 
 The approach above is for static start and dynamic stop value. Just think about it, what we have to do in the case of dynamic start and dynamic stop. 
 The constraint are same the start and stop should be greater than zero and stop should be greater than start value.
@@ -104,12 +104,12 @@ So, we need to modify the formula of 1st approach to get formula for this approa
 
 NOTE :pencil2: : max is nothing but the stop value and min is the start value.
 
-###RULE :
+### RULE :
 1) First, we need to sum the series from static 1 to dynamic stop value.
 2) After that we need calculate the sum of 1's that we want to exclude.
 3) If we reduce the sum value of '2)' from '1)', we'll get desired output.
 
-###The formula for above rule:
+### The formula for above rule:
 1) ((((max ** 2) - max) / 2) + max), same formula that we discovered from 1st approach.
 2) Here, we need to replace 'max' with (min - 1) ---> (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))
 3) Just reducing 2) from 1) ---> ((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))
@@ -125,7 +125,7 @@ Around 7000 hours in the traditional approach. How it will be in mathematical ap
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/1fa32a24-0394-442e-8241-8d24dde273e3)
 Uffff..... Again 0 microsecond which means less than a microsecond. The difference is very huge, from 7000 hours to less than a microsecond(may be few nanoseconds) which is insane.
 
-## 3) Moving to the next phase of the approach (Dynamic start, dynamic stop and dynamic step):
+# 3) Moving to the next phase of the approach (Dynamic start, dynamic stop and dynamic step):
 
 What we do if I need sum of series with desired interval.
 For example, min = 3, max = 7 and interval = 2 ---->  3 + 5 + 7 = 15
@@ -144,11 +144,26 @@ So, we need look at the 1's placement table closely after removing unshaded rows
 First, we have to know the count of possible numbers in the particular range. Here, 3, 5 and 7 are the possible values taken into account for summation.
 Dividing the difference of min and max with interval. We need to consider only the whole number, because in fraction we can't say the possibility. 
 After that, we need to consider the initial also which is min --> 3.  
-Then formula will be,  (((max-min) // interval) + 1)
+Then formula will be, row count = (((max-min) // interval) + 1)
 
-The, we need to find the number of columns possible in the table. So, we nned to multiply interval with row count and adding 1 to it, gives the number of columns.
+The, we need to find the number of columns possible in the table. So, we need to multiply interval with row count and adding 1 to it, gives the number of columns.
 Let's check... Here, row_count = (((7 - 3) // 2 ) + 1) = (4 // 2) + 1 = 2 + 1 = 3.
-For column count, we can directly put max value of input 7, which is (row_count * interval) + 1 
+For column count, 
+1) We know that min number of columns will be there for any input. Here, for sure there will 3 columns, no doubt in that. 
+2) We need to calculate rest of the column count which is interval * ( possible row count excluding min ---> (((max-min) // interval)) )
 
-### Discovered Formula : Row count = (((max-min) // interval) + 1)
-###                      column count = max
+### Row count = (((max-min) // interval) + 1)
+### column count = min + (interval * ((max - min) // interval) )
+
+Just shading the diagonal with different color for observation purpose...
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/60c259e0-78be-47df-9a5b-13433a0a2e11)
+Just look at the green shaded values. I'm writing here, (4,6) excluding 1st row which is minimum.
+Now, we can add the diagonal - 1 to the green shaded 1's. We know the sum of diagonal which is same as the row count.
+You can ask, then, how to find the green shaded values?
+The values are, (4 + 6) --> 2 (2 + 3). Here, 2 is the interval so we mention it as interval. 
+Finally, Interval * sum of series from min to row count will give us the summation of rest of the shaded values excluding diagonal and 1st row. We already know how to sum the series with 1 interval for dyanamic min and max. 
+
+### Total sum excluding diagonal and 1st row (min) = (Interval * (((( (row count-1) ** 2) - (row count-1)) / 2) + (row count-1))) 
+
+## Discovered Formula : min + Total sum excluding diagonal and 1st row (min) + (row count - 1)
+## Final Formula : min + ((Interval * (((( (((max-min) // interval)) ** 2) - (((max-min) // interval))) / 2) + (((max-min) // interval)))) ) + (((max-min) // interval))
