@@ -139,3 +139,16 @@ We're going to remove rest of the rows which unshaded and looking at the sheet.
 ### NOTE :pencil2: : The number of rows and columns will be different for interval > 1 for 1's placement table. Here the interval is 2. 
 Simply we can't reduce the unshaded part from total sum(min = 1, max = 7). Because, the shaded one is followed by unshaded with particular frequency.
 So, we need look at the 1's placement table closely after removing unshaded rows. The table is given below...
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/d8d7af07-be68-42d1-9fe6-f371a803c310)
+
+First, we have to know the count of possible numbers in the particular range. Here, 3, 5 and 7 are the possible values taken into account for summation.
+Dividing the difference of min and max with interval. We need to consider only the whole number, because in fraction we can't say the possibility. 
+After that, we need to consider the initial also which is min --> 3.  
+Then formula will be,  (((max-min) // interval) + 1)
+
+The, we need to find the number of columns possible in the table. So, we nned to multiply interval with row count and adding 1 to it, gives the number of columns.
+Let's check... Here, row_count = (((7 - 3) // 2 ) + 1) = (4 // 2) + 1 = 2 + 1 = 3.
+For column count, we can directly put max value of input 7, which is (row_count * interval) + 1 
+
+### Discovered Formula : Row count = (((max-min) // interval) + 1)
+###                      column count = max
