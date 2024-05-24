@@ -58,9 +58,10 @@ We need diagonal and lower part right!!! What actually diagonal mean....
 NOTE :pencil2: : Start and stop value considered from example 1. 
 1) Sum of diagonal is nothing but the stop or 'n'.
 2) To get lower part and upper part, we've to reduce stop value from total 1's which is the square of stop. ((stop ** 2) - stop ---> ((5 ** 2) - 5) ---> (25 - 5) ---> 20).
-3) 20 is the total 1's excluding diagonal. To get lower part, just simply divide it by 2. you'll get sum of lower part 1's (20/2 = 10).
-4) Finally, add it with stop (n). 10(lower part) + 5(stop) = 15.
-5) Hurray, we got it... :sparkles: :star:
+3) 20 is the total 1's excluding diagonal. Lower part is nothing but the half of square of stop excluding diagonal which is half of 20.
+   So, just simply divide it by 2. you'll get sum of lower part 1's (20/2 = 10).
+5) Finally, add it with stop (n). 10(lower part) + 5(stop) = 15.
+6) Hurray, we got it... :sparkles: :star:
 
 We've to prove with time consumption. So, look at the upcoming image...
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/f7e0e954-2d5f-4e62-81b0-41251ac71e2a)
