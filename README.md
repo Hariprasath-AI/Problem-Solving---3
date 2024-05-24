@@ -157,13 +157,31 @@ For column count,
 
 Just shading the diagonal with different color for observation purpose...
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/60c259e0-78be-47df-9a5b-13433a0a2e11)
-Just look at the green shaded values. I'm writing here, (4,6) excluding 1st row which is minimum.
-Now, we can add the diagonal - 1 to the green shaded 1's. We know the sum of diagonal which is same as the row count.
-You can ask, then, how to find the green shaded values?
+Just look at the green shaded values. I'm writing here, (4,6) excluding 1st row which is minimum. 
+We know the sum of diagonal which is same as the row count.
+You can ask, how to find the green shaded values?
 The values are, (4 + 6) --> 2 (2 + 3). Here, 2 is the interval so we mention it as interval. 
 Finally, Interval * sum of series from min to row count will give us the summation of rest of the shaded values excluding diagonal and 1st row. We already know how to sum the series with 1 interval for dyanamic min and max. 
 
-### Total sum excluding diagonal and 1st row (min) = (Interval * (((( (row count-1) ** 2) - (row count-1)) / 2) + (row count-1))) 
+### Here, we're sub dividing the problem into 3 parts.
+1) Minimum, we know that 1st value for summation.
+2) We need to compute diagonal part excluding the 1st row.
+3) The, rest of the values.
+We're going to compute these three things seperately and finally we're going to combine it. Ok, I'll show you in the table. The same instance we considered for min, max and interval (3,7,2).
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/dc4abc57-239f-45c1-adba-c5cf54315977)
+The reason for 1st row seperation from formula is, there is possible for 1st row of contains only 1 where min = 1. In that case there will no shaded value excluding diagonal for 1st row. To avoid those exception, we're doing this approach.
+The green shaded value starts at 4 and ends at 6 --> (4,6) ---> 2(2 + 3) --> Interval(minimum possible green shade + .. + maximum possible green shade)
 
-## Discovered Formula : min + Total sum excluding diagonal and 1st row (min) + (row count - 1)
-## Final Formula : min + ((Interval * (((( (((max-min) // interval)) ** 2) - (((max-min) // interval))) / 2) + (((max-min) // interval)))) ) + (((max-min) // interval))
+### Total sum excluding diagonal and 1st row (min) = interval * (sum of series)
+
+## Formula = min + Total sum excluding diagonal and 1st row (min) + (row count - 1)
+:one: min(red shaded part in above image)
+:two: (green shaded part)
+(2nd row shaded count) shade_min = min + interval - 1 <br/>
+(last row shaded count) shade_max = column count - 1 <br/>
+(Start of series after taking out the interval as common value) series_min =  shaded_min // interval <br/>
+(End of series after taking out the interval as common value) series_max = shaded_max // interval <br/>
+series_min and series_max will be passed as min and max in the discovered formula "((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))" and saved in shaded_sum
+:three: 
+row count - 1 (oranged shaded part in above image)
+## Final Formula : :one: + :two: + :three:
