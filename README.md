@@ -180,11 +180,25 @@ After computing sum of the series part, we're substituting in the above formula 
 ## :two: Second possible number = min + interval
 ## :three: bias = second possible number % interval
 ## :four: second number interval count = second possible number // interval
-## :five: second number interval count = min(Total possibles count excluding min value, second number interval count)
-### NOTE :pencil2: : Again, we're doing correction in intervals count in second number. Why we're doing this.. This is just an exception handling to avoid an error when the second possible number is greater than the input 'max'. In that case 'Total possibles count excluding min value' will be zero. Then, the 'second number interval count' should also be 0. Because there is nothing to compute.
-## :six: series_sum = ((((Total possible count excluding min value ** 2) - Total possible count excluding min value) / 2) + Total possible count excluding min value) - (((((second number interval count - 1) ** 2) - (second number interval count - 1)) / 2) + (second number interval count - 1))
-### NOTE :pencil2: : Substituting 'second number interval count' as 'min' and 'Total possibles count excluding min value' as 'max' in the formula from approach - 2 "((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))" which is series sum.
-## :seven: sum of bias = Total possibles count excluding min value * bias
+## :five: total interval count till minimum = min // interval
+## :six: last possible = ( (total interval count till minimum + Total possible count excluding min value ) * interval) + (Total possible count excluding min value * bias)
+## :seven: second number interval count = second_possible_number // interval
+## :eight: last possible interval count = last_possible // interval
 
-## NOTE :pencil2: : All above 7 steps should be done one by one and finally substitute in the below given formula. 
+try:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    sec_num_inter_count = row_excluding_1st_no * sec_num_inter_count / row_excluding_1st_no<br/>
+except:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    sec_num_inter_count = 0<br/>
+try:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    last_possible_inter_count = row_excluding_1st_no * last_possible_inter_count / row_excluding_1st_no<br/>
+except:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    last_possible_inter_count = 0<br/>
+
+### NOTE :pencil2: : Again, we're doing correction in interval count in second number and last number. Why we're doing this.. This is just an exception handling to avoid an error when the second possible number is greater than the input 'max'. In that case 'Total possibles count excluding min value' will be zero. Then, the 'second number interval count' should also be 0. Because there is nothing to compute. That value will be passed to compute upcoming series sum. So, here we're multiplying interval counts of second and last number with Total possible count excluding min value. Then, we are dividing it with Total possible count excluding min value. There will be no change in the interval counts, if those are greater than zero. If 'Total possible count excluding min value' is zero, the the expression will be like this 0 / 0. This is nothing. Error will be thrown for this calculation 'Divide by zero'. For this situation, we're assigning zero for second and last number interval counts. So, the series sum be zero.
+
+## :nine: series_sum = ((((Total possible count excluding min value ** 2) - Total possible count excluding min value) / 2) + Total possible count excluding min value) - (((((second number interval count - 1) ** 2) - (second number interval count - 1)) / 2) + (second number interval count - 1))
+### NOTE :pencil2: : Substituting 'second number interval count' as 'min' and 'Total possibles count excluding min value' as 'max' in the formula from approach - 2 "((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))" which is series sum.
+## :one::zero: sum of bias = Total possibles count excluding min value * bias
+
+## NOTE :pencil2: : All above 10 steps should be done one by one and finally substitute in the below given formula. 
 # Discovered Formula : min + (interval * (series sum)) + sum of bias
