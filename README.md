@@ -181,7 +181,7 @@ After computing sum of the series part, we're substituting in the above formula 
 ## :three: bias = second possible number % interval
 ## :four: second number interval count = second possible number // interval
 ## :five: second number interval count = min(Total possibles count excluding min value, second number interval count)
-### NOTE :pencil2: : Again, we're doing correction in intervals count in second number. Why we're doing this.. This is just an exception handling to avoid error when the second possible number is greater than the input 'max'. In that case 'Total possibles count excluding min value' will be zero. Then, the 'second number interval count' should also be 0. Because there is nothing to compute.
+### NOTE :pencil2: : Again, we're doing correction in intervals count in second number. Why we're doing this.. This is just an exception handling to avoid an error when the second possible number is greater than the input 'max'. In that case 'Total possibles count excluding min value' will be zero. Then, the 'second number interval count' should also be 0. Because there is nothing to compute.
 ## :six: series_sum = ((((Total possible count excluding min value ** 2) - Total possible count excluding min value) / 2) + Total possible count excluding min value) - (((((second number interval count - 1) ** 2) - (second number interval count - 1)) / 2) + (second number interval count - 1))
 ### NOTE :pencil2: : Substituting 'second number interval count' as 'min' and 'Total possibles count excluding min value' as 'max' in the formula from approach - 2 "((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))" which is series sum.
 ## :seven: sum of bias = Total possibles count excluding min value * bias
