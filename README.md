@@ -232,3 +232,21 @@ print(final_output)<br/>
 print("The end time is ", datetime.datetime.now() )<br/>
 print("The start time is ", start_time )<br/>
 
+## Sample Input 1 :
+min = 3, max = 7, interval = 2. The answer should be, 3 + 5 + 7 = 15
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/46b48ae9-85c1-4770-9a6f-de8170fa9452)
+
+## Sample Input 2 :
+min = 99, max = 109, interval = 10. The answer should be, 99 + 109 = 208
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/b0f8a58c-1aa9-48cd-9bfb-4881d3b6020a)
+
+## Sample Input 3:
+min = 99, max = 103, interval = 15. The answer should be, 99.
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/fc6c207b-b375-4c43-839d-9d9c878d0319)
+
+## Sample Input 4:
+min = 17, max = 200, interval = 39. The answer should be, 17 + 56 + 95 + 134 + 173 = 475.
+![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/bedcf4fa-ab64-4495-bb44-ab1c2416b373)
+
+
+
