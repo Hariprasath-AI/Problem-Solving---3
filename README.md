@@ -163,44 +163,28 @@ For column count,
    But, the 2nd possible number is 5, right. Here, we got 4. Then where is that 1 and what it mean. Simple, that's bias. (NOTE:pencil2::Here I'm calling it as bias value)
    So, (Number of interval * interval) + bias gives us the desired value of the series.
 4) After calculating the bias, we have to know the how many intervals that the number holds which is count of intervals for 2nd possible number (5 // 2 = 2).
-5) Then, add that number of intervals of 2nd number with row count excluding 1st row and 2nd row --> no of intervals(2nd) + (row count - 2) = (2nd number // interval) +((((max-min) // interval) + 1) - 2 ) = (2nd number // interval) + (((max-min) // interval) - 1)
+5) Then, add that number of intervals of 2nd number with row count excluding 1st number and 2nd number --> no of intervals(2nd) + (row count - 2) = (2nd number // interval) +((((max-min) // interval) + 1) - 2 ) = (2nd number // interval) + (((max-min) // interval) - 1)
+6) The above expression will gives the count of intervals in the maximum possible number. <br/>
+   The above expression * interval + bias gives the col count which is the maximum possible number in the series. <br/>
+ 
+3 <br/>
+5  = (no of interval * interval) + bias = (2 * 2) + 1 <br/>
+7  = (no of interval * interval) + bias = (3 * 2) + 1 <br/>
+Then, the expression will be... 3 + ((2*2)+1)) + ((3*2)+1)). From the expression we observed that the common values are the bias and interval. <br/>
+Then, min + (interval * (sum of series --> whereas, no of interval in 2nd number = min, no of intervals in last number = max) ) + (row count excluding 1st number * bias) will be the formula to find out sum of the series. <br/>
+Here, (2+3) part will be substituted in the formula from 2nd approach whereas 2 will be the start and 3 will be the stop. <br/>
+After computing sum of the series part, we're substituting in the above formula to get sum of the series.
 
-   
-   
-   
 
-### Row count = (((max-min) // interval) + 1)
-### column count = 
+## :one: Total possible count excluding min value (Row count excluding 1) = ((max-min) // interval)
+## :two: Second possible number = min + interval
+## :three: bias = second possible number % interval
+## :four: second number interval count = second possible number // interval
+## :five: second number interval count = min(Total possibles count excluding min value, second number interval count)
+### NOTE :pencil2: : Again, we're doing correction in intervals count in second number. Why we're doing this.. This is just an exception handling to avoid error when the second possible number is greater than the input 'max'. In that case 'Total possibles count excluding min value' will be zero. Then, the 'second number interval count' should also be 0. Because there is nothing to compute.
+## :six: series_sum = ((((Total possible count excluding min value ** 2) - Total possible count excluding min value) / 2) + Total possible count excluding min value) - (((((second number interval count - 1) ** 2) - (second number interval count - 1)) / 2) + (second number interval count - 1))
+### NOTE :pencil2: : Substituting 'second number interval count' as 'min' and 'Total possibles count excluding min value' as 'max' in the formula from approach - 2 "((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))" which is series sum.
+## :seven: sum of bias = Total possibles count excluding min value * bias
 
-
-
-
-Just shading the diagonal with different color for observation purpose...
-![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/60c259e0-78be-47df-9a5b-13433a0a2e11)
-Just look at the green shaded values. I'm writing here, (4,6) excluding 1st row which is minimum. 
-We know the sum of diagonal which is same as the row count.
-You can ask, how to find the green shaded values?
-The values are, (4 + 6) --> 2 (2 + 3). Here, 2 is the interval so we mention it as interval. 
-Finally, Interval * sum of series from min to row count will give us the summation of rest of the shaded values excluding diagonal and 1st row. We already know how to sum the series with 1 interval for dyanamic min and max. 
-
-### Here, we're sub dividing the problem into 3 parts.
-1) Minimum, we know that 1st value for summation.
-2) We need to compute diagonal part excluding the 1st row.
-3) The, rest of the values.
-We're going to compute these three things seperately and finally we're going to combine it. Ok, I'll show you in the table. The same instance we considered for min, max and interval (3,7,2).
-![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/dc4abc57-239f-45c1-adba-c5cf54315977)
-The reason for 1st row seperation from formula is, there is possible for 1st row of contains only 1 where min = 1. In that case there will no shaded value excluding diagonal for 1st row. To avoid those exception, we're doing this approach.
-The green shaded value starts at 4 and ends at 6 --> (4,6) ---> 2(2 + 3) --> Interval(minimum possible green shade + .. + maximum possible green shade)
-
-### Total sum excluding diagonal and 1st row (min) = interval * (sum of series)
-
-## Formula = min + Total sum excluding diagonal and 1st row (min) + (row count - 1)
-## :one: min(red shaded part in above image)
-## :two: (green shaded part in the above image)
-(2nd row shaded count) shaded_min = min + interval - 1 <br/>
-(last row shaded count) shaded_max = column count - 1 <br/>
-(Start of series after taking out the interval as common value) series_min =  shaded_min // interval <br/>
-(End of series after taking out the interval as common value) series_max = shaded_max // interval <br/>
-series_min and series_max will be passed as min and max in the discovered formula "((((max ** 2) - max) / 2) + max) - (((((min - 1) ** 2) - (min - 1)) / 2) + (min - 1))" and saved in shaded_sum<br/>
-## :three: row count - 1 (oranged shaded part in above image)
-## Final Formula : :one: + :two: + :three:
+## NOTE :pencil2: : All above 7 steps should be done one by one and finally substitute in the below given formula. 
+# Discovered Formula : min + (interval * (series sum)) + sum of bias
