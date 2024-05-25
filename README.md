@@ -211,7 +211,7 @@ row_excluding_1st_no = ((max_input-min_input) // interval)<br/>
 second_possible_number = min_input + interval<br/>
 bias = second_possible_number % interval<br/>
 total_inter_count_till_min = min_input // interval<br/>
-last_possible = ( (total_inter_count_till_min + row_excluding_1st_no ) * interval) + (row_excluding_1st_no * bias)<br/>
+last_possible = ( (total_inter_count_till_min + row_excluding_1st_no ) * interval) +  bias<br/>
 
 sec_num_inter_count = second_possible_number // interval<br/>
 try:<br/>
