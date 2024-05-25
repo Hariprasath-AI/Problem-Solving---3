@@ -145,15 +145,32 @@ First, we have to know the count of possible numbers in the particular range(Her
 Dividing the difference of min and max with interval will gives us the count of possible values for summation (Considering only whole number for division.. so, floor division is used).  
 After that, we need to consider the initial value also which is min --> 3, So, 1 will be added to the count that we calculated in the previous line.  
 Then, the formula will be, row count = (((max-min) // interval) + 1)
-The, we need to find the number of columns possible in the table. So, we need to multiply interval with row count and adding 1 to it, gives the number of columns.
 Let's check... Here, row_count = (((7 - 3) // 2 ) + 1) = (4 // 2) + 1 = 2 + 1 = 3.
 
 For column count, 
-1) We know that min number of columns will be there for any input. Here, for sure there will 3 columns, no doubt in that. 
-2) We need to calculate rest of the column count which is interval * ( possible row count excluding min ---> (((max-min) // interval)) )
+1) We know that min number of columns possible for any input is given minimum. Here, for sure there will 3 columns, no doubt in that.. (NOTE:pencil2:: Anyhow min will be taken into summation for any input)<br/>
+2) Right now we know the minimum possible sum is 'min'. To know the maximum value in the series, first we've to calculate 1st possible number after initial.<br/>
+   Which is nothing but 'min' + interval. So generally this is the 2nd possible number in the series. Here, min is 3, max is 7 and interval is 2. so 2nd possible is 3 + 2 = 5.<br/>
+   After calculating 2nd possible value in the series, we can easily find out the maximum possible value of the series.<br/>
+3) Right now, we know the 1st number and 2nd number of the series. It will be increasing right. <br/>
+   I'm writing like this, --> min + (min + interval) + ..... + (previous value + interval) <br/>
+   Next, we have to know the bias value. You can ask, what actually the 'bias' is!!! Bias is the excluded value from each number in the series. Just look at the calculation below,
+   Considering the same input values for min, max and interval.
+   1st value in the series ---> 3  (We already know this value will be considered for summation. So, nothing to do in this stage) <br/>
+   2nd value in the series ---> 5  <br/>
+   From 2nd possible value, we have to know what actually the value is(Here, 5)! How many intervals are there in the number 5. (5 // 2 = 2) 2 right!!!, <br/>
+   Ok, we know 2 intervals are there in the 2nd possible. So, just multiplying interval with no. of interval which is 2 are,2 * 2 = 4. <br/>
+   But, the 2nd possible number is 5, right. Here, we got 4. Then where is that 1 and what it mean. Simple, that's bias. (NOTE:pencil2::Here I'm calling it as bias value)
+   So, (Number of interval * interval) + bias gives us the desired value of the series.
+4) After calculating the bias, we have to know the how many intervals that the number holds which is count of intervals for 2nd possible number (5 // 2 = 2).
+5) Then, add that number of intervals of 2nd number with row count excluding 1st row and 2nd row --> no of intervals(2nd) + (row count - 2) = (2nd number // interval) +((((max-min) // interval) + 1) - 2 ) = (2nd number // interval) + (((max-min) // interval) - 1)
+
+   
+   
+   
 
 ### Row count = (((max-min) // interval) + 1)
-### column count = min + (interval * ((max - min) // interval) )
+### column count = 
 
 
 
