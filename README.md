@@ -141,19 +141,22 @@ Simply we can't reduce the unshaded part from total sum(min = 1, max = 7). Becau
 So, we need look at the 1's placement table closely after removing unshaded rows. The table is given below...
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/d8d7af07-be68-42d1-9fe6-f371a803c310)
 
-First, we have to know the count of possible numbers in the particular range. Here, 3, 5 and 7 are the possible values taken into account for summation.
-Dividing the difference of min and max with interval. We need to consider only the whole number, because in fraction we can't say the possibility. 
-After that, we need to consider the initial also which is min --> 3.  
-Then formula will be, row count = (((max-min) // interval) + 1)
-
+First, we have to know the count of possible numbers in the particular range(Here, row count). Here, 3, 5 and 7 are the possible values taken into account for summation.
+Dividing the difference of min and max with interval will gives us the count of possible values for summation (Considering only whole number for division.. so, floor division is used).  
+After that, we need to consider the initial value also which is min --> 3, So, 1 will be added to the count that we calculated in the previous line.  
+Then, the formula will be, row count = (((max-min) // interval) + 1)
 The, we need to find the number of columns possible in the table. So, we need to multiply interval with row count and adding 1 to it, gives the number of columns.
 Let's check... Here, row_count = (((7 - 3) // 2 ) + 1) = (4 // 2) + 1 = 2 + 1 = 3.
+
 For column count, 
 1) We know that min number of columns will be there for any input. Here, for sure there will 3 columns, no doubt in that. 
 2) We need to calculate rest of the column count which is interval * ( possible row count excluding min ---> (((max-min) // interval)) )
 
 ### Row count = (((max-min) // interval) + 1)
 ### column count = min + (interval * ((max - min) // interval) )
+
+
+
 
 Just shading the diagonal with different color for observation purpose...
 ![image](https://github.com/Hariprasath-AI/Problem-Solving---3/assets/74598275/60c259e0-78be-47df-9a5b-13433a0a2e11)
