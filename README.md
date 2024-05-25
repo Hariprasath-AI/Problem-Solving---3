@@ -181,7 +181,7 @@ After computing sum of the series part, we're substituting in the above formula 
 ## :three: bias = second possible number % interval
 ## :four: second number interval count = second possible number // interval
 ## :five: total interval count till minimum = min // interval
-## :six: last possible = ( (total interval count till minimum + Total possible count excluding min value ) * interval) + (Total possible count excluding min value * bias)
+## :six: last possible = ( (total interval count till minimum + Total possible count excluding min value ) * interval) +  bias
 ## :seven: second number interval count = second_possible_number // interval
 ## :eight: last possible interval count = last_possible // interval
 
